@@ -1,14 +1,12 @@
 import express, { Express, Request, Response } from 'express';
 import { Worker } from 'worker_threads';
-import dotenv from 'dotenv';
 import { cpuIntensiveFunc } from './cpu_intensive_func';
 import { ioIntensiveFunc } from './io_intensive_func';
 import { queue } from './queue';
 import { tasks } from './tasks';
 
-dotenv.config();
 const app: Express = express();
-const port = process.env.PORT;
+const port = 8000;
 
 // experiment 1:
 // first hit: http://localhost:8000/cpu-intensive-task 
