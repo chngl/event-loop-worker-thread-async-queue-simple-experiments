@@ -24,7 +24,7 @@ app.get('/cpu-intensive-task', (req: Request, res: Response) => {
 });
 
 // experiment 2:
-// first hit: http://localhost:8000/cpu-intensive-task 
+// first hit: http://localhost:8000/cpu-intensive-task-off-loaded-to-worker
 // then hit: http://localhost:8000/quick-task
 // observe that the server can continue to process the quick task while the cpu intensive task is handled in the worker thread.
 // it's because we off load the cpu intensive task to a worker thread, therefore it doesn't block the event loop anymore.
