@@ -2,6 +2,7 @@ import { cpuIntensiveFunc } from './cpu_intensive_func';
 import { ioIntensiveFunc } from './io_intensive_func';
 import type { Task } from './queue';
 
+// Tasks
 export const tasks: Array<Task> = [
     {
         id: 1,
